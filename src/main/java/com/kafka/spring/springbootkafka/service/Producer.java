@@ -16,7 +16,7 @@ public class Producer {
 
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
-	@Value("kafka.topic.name")
+	@Value("${kafka.topic.name}")
 	private String kafkaTopic;
 	
 	public void send(User user) {
